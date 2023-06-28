@@ -1,4 +1,4 @@
-# Parte 1 - Desenvolvimento Web II
+#  Desenvolvimento Web II
 
 
 Neste repositório está o projeto desenvolvido para a disciplina 'Desenvolvimento Web II', uma disciplina de segundo ano do curso de Informática da Universidade da Maia - UMAIA. 
@@ -15,6 +15,14 @@ _O repositório está organizado da seguite maneira:_
 * [Documento App](Parte%202/inf22dw2g07-main%20m2/app/dockerfile) para criação da APP.
 * [Documento Docker-compose](Parte%202/inf22dw2g07-main%20m2/api/docker-compose.yml)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
 
+## Galeria
+
+| Página      | Imagem |
+| ----------- | ----------- |
+| Página Ínicial      | ![Drag Racing](/doc/img/Screenshot_4.png)       |
+| Página Musicas   | ![Drag Racing](/doc/img/Screenshot_5.png)       |
+| Página Artistas  | ![Drag Racing](/doc/img/Screenshot_7.png)       |
+| Página Albums      | ![Drag Racing](/doc/img/Screenshot_6.png)       |
 
 ## Tecnologias Utilizadas
 
@@ -24,6 +32,7 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * NodeJS
 * MySQL
 * OpenAPI
+* Sequelize
 
 
 ### Frameworks e Livrarias 
@@ -38,5 +47,11 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * Capítulo 2: [Recursos](/doc/c2.md)
 ### Produto
 * Capítulo 3: [Resultado Final](/doc/c3.md)
+
+## Grupo
+* Emanuel Afonso (https://github.com/EmanuelAfonso21)
+* Alexandre Pinheiro (https://github.com/AlexandrePinheiroo)
+
+
 
 <br>
