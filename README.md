@@ -14,6 +14,9 @@ _O repositório está organizado da seguite maneira:_
 * **Documentação** está na pasta [/doc](doc/).
 * [Documento App](Parte%202/inf22dw2g07-main%20m2/app/dockerfile) para criação da APP.
 * [Documento Docker-compose](Parte%202/inf22dw2g07-main%20m2/api/docker-compose.yml)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
+* [Postman Musicas](/doc/Musicas.postman_collection.json) para importar para o postman para ter acesso aos recursos das musicas.
+* [Postman Artistas](/doc/Artistas.postman_collection.json) para importar para o postman para ter acesso aos recursos dos artistas.
+* [Postman Albums](/doc/Albums.postman_collection.json) para importar para o postman para ter acesso aos recursos dos albums.
 
 ## Galeria
 
