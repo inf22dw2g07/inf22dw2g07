@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "237f4038-cf05-48c6-896f-cf91736ae78a",
+		"name": "Artistas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'GET' \\\r\n  'http://localhost:3009/artista/' \\\r\n  -H 'accept: application/json'"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'POST' \\\r\n  'http://localhost:3009/artista/' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"nome\": \"string\",\r\n  \"pais\": \"string\"\r\n}'"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'GET' \\\r\n  'http://localhost:3009/artista/1' \\\r\n  -H 'accept: application/json'"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'PUT' \\\r\n  'http://localhost:3009/artista/1' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 0,\r\n  \"nome\": \"string\",\r\n  \"pais\": \"string\"\r\n}'"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "curl -X 'DELETE' \\\r\n  'http://localhost:3009/artista/1' \\\r\n  -H 'accept: /'"
+				}
+			},
+			"response": []
+		}
+	]
+}
