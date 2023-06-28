@@ -1,0 +1,137 @@
+openapi: 3.0.0
+info:
+  title: API de Musicas
+  version: 1.0.0
+paths:
+  /album/:
+    get:
+      tags:
+        - Album
+      summary: Obter todos os albums
+      responses:
+        '200':
+          description: Sucesso. Retorna todos os albums.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AlbumInput'
+        '500':
+          description: Erro interno do servidor. Falha ao obter os albums.
+    post:
+      tags:
+        - Album
+      summary: Criar um novo album
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AlbumInput'
+      responses:
+        '201':
+          description: Sucesso. Retorna o album criado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+        '500':
+          description: Erro interno do servidor. Falha ao criar o album.
+  /album/{id}:
+    get:
+      tags:
+        - Album
+      summary: Obter um album pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID do album a ser obtido
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Sucesso. Retorna o album correspondente ao ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+        '404':
+          description: Album não encontrado.
+        '500':
+          description: Erro interno do servidor. Falha ao obter o album.
+    put:
+      tags:
+        - Album
+      summary: Atualizar um album pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID do album a ser atualizado
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Album'
+      responses:
+        '200':
+          description: Sucesso. Retorna o album atualizado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Album'
+        '404':
+          description: Album não encontrado.
+        '500':
+          description: Erro interno do servidor. Falha ao atualizar o album.
+    delete:
+      tags:
+        - Album
+      summary: Excluir um album
+      parameters:
+        - name: id
+          in: path
+          description: ID do album a ser excluído
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Album excluído com sucesso
+        '404':
+          description: Album não encontrado
+        '500':
+          description: Erro interno do servidor
+components:
+  schemas:
+    Album:
+      type: object
+      properties:
+        id:
+          type: integer
+          autoIncrement: true
+          primaryKey: true
+        nome:
+          type: string
+        idartista:
+          type: integer
+      required:
+        - nome
+        - idartista
+    AlbumInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        idartista:
+          type: integer
+      required:
+        - nome
+        - idartista
+
+
