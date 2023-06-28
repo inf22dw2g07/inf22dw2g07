@@ -1,0 +1,137 @@
+openapi: 3.0.0
+info:
+  title: API de Musicas
+  version: 1.0.0
+paths:
+  /artista/:
+    get:
+      tags:
+        - Artista
+      summary: Obter todos os artistas
+      responses:
+        '200':
+          description: Sucesso. Retorna todos os artistas.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ArtistaInput'
+        '500':
+          description: Erro interno do servidor. Falha ao obter os artistas.
+    post:
+      tags:
+        - Artista
+      summary: Criar um novo artista
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ArtistaInput'
+      responses:
+        '201':
+          description: Sucesso. Retorna o artista criado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artista'
+        '500':
+          description: Erro interno do servidor. Falha ao criar o artista.
+  /artista/{id}:
+    get:
+      tags:
+        - Artista
+      summary: Obter um artista pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID do artista a ser obtido
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Sucesso. Retorna o artista correspondente ao ID.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artista'
+        '404':
+          description: Artista não encontrado.
+        '500':
+          description: Erro interno do servidor. Falha ao obter o artista.
+    put:
+      tags:
+        - Artista
+      summary: Atualizar um Artista pelo ID
+      parameters:
+        - name: id
+          in: path
+          description: ID do Artista a ser atualizado
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Artista'
+      responses:
+        '200':
+          description: Sucesso. Retorna o artista atualizado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Artista'
+        '404':
+          description: Artista não encontrado.
+        '500':
+          description: Erro interno do servidor. Falha ao atualizar o Artista.
+    delete:
+      tags:
+        - Artista
+      summary: Excluir um artista
+      parameters:
+        - name: id
+          in: path
+          description: ID do artista a ser excluído
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Artista excluído com sucesso
+        '404':
+          description: Artista não encontrado
+        '500':
+          description: Erro interno do servidor
+components:
+  schemas:
+    Artista:
+      type: object
+      properties:
+        id:
+          type: integer
+          autoIncrement: true
+          primaryKey: true
+        nome:
+          type: string
+        pais:
+          type: string
+      required:
+        - nome
+        - pais
+    ArtistaInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        pais:
+          type: string
+      required:
+        - nome
+        - pais
+
+

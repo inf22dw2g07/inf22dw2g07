@@ -1,0 +1,150 @@
+paths:
+  /musica:
+    post:
+      tags:
+        - Musica
+      summary: Criar uma nova musica
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MusicaInput"
+      responses:
+        '201':
+          description: Musica criada com sucesso
+        '500':
+          description: Ocorreu um erro ao criar a musica
+
+    get:
+      tags:
+        - Musica
+      summary: Obter todas as musicas
+      responses:
+        '200':
+          description: Lista de musicas obtida com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MusicaInput"
+        '500':
+          description: Ocorreu um erro ao obter as musicas
+
+  /musica/{id}:
+    get:
+      tags:
+        - Musica
+      summary: Obter uma musica específica por ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: ID da musica a ser obtida
+      responses:
+        '200':
+          description: Musica obtida com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Musica"
+        '404':
+          description: Musica não encontrado
+        '500':
+          description: Ocorreu um erro ao obter a musica
+
+    put:
+      tags:
+        - Musica
+      summary: Atualizar uma musica específica por ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: ID da musica a ser atualizada
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Musica"
+      responses:
+        '200':
+          description: Musica atualizada com sucesso
+        '404':
+          description: Musica não encontrada
+        '500':
+          description: Ocorreu um erro ao atualizar a musica
+
+    delete:
+      tags:
+        - Musica
+      summary: Excluir uma musica específica por ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+            format: int64
+          required: true
+          description: ID da musica a ser excluída
+      responses:
+        '200':
+          description: Musica excluída com sucesso
+        '404':
+          description: Musica não encontrado
+        '500':
+          description: Ocorreu um erro ao excluir a musica
+
+
+components:
+  schemas:
+    Musica:
+      type: object
+      properties:
+        id:
+          type: integer
+          autoIncrement: true
+          primaryKey: true
+        nome:
+          type: string
+        genero:
+          type: string
+        idartista:
+          type: integer
+        datadelancamento:
+          type: integer
+        idalbum:
+          type: integer
+      required:
+        - nome
+        - genero
+        - idartista
+        - datadelancamento
+        - idalbum
+    MusicaInput:
+      type: object
+      properties:
+        nome:
+          type: string
+        genero:
+          type: string
+        idartista:
+          type: integer
+        datadelancamento:
+          type: integer
+        idalbum:
+          type: integer
+      required:
+        - nome
+        - genero
+        - idartista
+        - datadelancamento
+        - idalbum
