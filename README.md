@@ -37,6 +37,8 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * MySQL
 * OpenAPI
 * Sequelize
+* HTML
+* CSS
 
 
 ### Frameworks e Livrarias 
