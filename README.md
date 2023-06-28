@@ -55,6 +55,7 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 
 * Docker
 * NodeJS
+* React
 
 
 
