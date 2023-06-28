@@ -32,10 +32,10 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 
 
 ### Apresentação da API
-* Capítulo 1: [Apresentação da API](inf22dw2g02-main/doc/c1.md)
+* Capítulo 1: [Apresentação da API](/doc/c1.md)
 ### Recursos
-* Capítulo 2: [Recursos](inf22dw2g02-main/doc/c2.md)
+* Capítulo 2: [Recursos](/doc/c2.md)
 ### Produto
-* Capítulo 3: [Resultado Final](inf22dw2g02-main/doc/c3.md)
+* Capítulo 3: [Resultado Final](/doc/c3.md)
 
 <br>
