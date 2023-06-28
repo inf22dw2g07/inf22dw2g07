@@ -9,11 +9,11 @@ Este trabalho tem como objetivo criar um serviço web para gestão de de musicas
 ## Organização do repositório 
 
 _O repositório está organizado da seguite maneira:_
-* **Código Fonte API** está na pasta [Parte 1/API](/Parte_1/api).
+* **Código Fonte API** está na pasta [Parte 1/API](/Parte%201/api).
 * **Código Fonte APP** está na pasta [Parte 2/APP](Parte%202/inf22dw2g07-main%20m2/app).
 * **Documentação** está na pasta [/doc](doc/).
-* [Documento MYSQL](src/api/openapi.yaml) para criação da Base de Dados.
-* [Documento Docker-compose](Queries_base_de_dados.sql)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
+* [Documento App](Parte%202/inf22dw2g07-main%20m2/app/dockerfile) para criação da APP.
+* [Documento Docker-compose](Parte%202/inf22dw2g07-main%20m2/api/docker-compose.yml)para puxar as imagens dos repositórios DockerHub e montar a aplicação.
 
 
 ## Tecnologias Utilizadas
