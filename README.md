@@ -28,6 +28,16 @@ _O repositório está organizado da seguite maneira:_
 | Página Artistas  | ![Drag Racing](/doc/img/Screenshot_7.png)       |
 | Página Albums      | ![Drag Racing](/doc/img/Screenshot_6.png)       |
 
+
+
+### Apresentação da API
+* Capítulo 1: [Apresentação da API](/doc/c1.md)
+### Recursos
+* Capítulo 2: [Recursos](/doc/c2.md)
+### Produto
+* Capítulo 3: [Resultado Final](/doc/c3.md)
+
+
 ## Tecnologias Utilizadas
 
 _As tecnologias usadas neste projeto, foram as seguites:_
@@ -47,12 +57,6 @@ _As tecnologias usadas neste projeto, foram as seguites:_
 * NodeJS
 
 
-### Apresentação da API
-* Capítulo 1: [Apresentação da API](/doc/c1.md)
-### Recursos
-* Capítulo 2: [Recursos](/doc/c2.md)
-### Produto
-* Capítulo 3: [Resultado Final](/doc/c3.md)
 
 ## Grupo
 * Emanuel Afonso (https://github.com/EmanuelAfonso21)
