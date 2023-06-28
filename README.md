@@ -17,7 +17,8 @@ _O repositório está organizado da seguite maneira:_
 * [Postman Musicas](/doc/Musicas.postman_collection.json) para importar para o postman para ter acesso aos recursos das musicas.
 * [Postman Artistas](/doc/Artistas.postman_collection.json) para importar para o postman para ter acesso aos recursos dos artistas.
 * [Postman Albums](/doc/Albums.postman_collection.json) para importar para o postman para ter acesso aos recursos dos albums.
-
+* [Dados para base de dados](/Dados.sql) ficheiro para inserir os 30 dados na base de dados divido a erro na criação da base de dados pelo ficheiro(/Parte%201/api/musica.sql)
+  
 ## Galeria
 
 | Página      | Imagem |
